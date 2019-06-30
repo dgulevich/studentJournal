@@ -12,7 +12,7 @@ public class TeacherDaoImpl implements TeacherDao {
 
     }
 
-    private static TeacherDao getInstance() {
+    public static TeacherDao getInstance() {
         if (instance == null) {
             instance = new TeacherDaoImpl();
         }

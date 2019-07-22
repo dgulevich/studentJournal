@@ -6,8 +6,12 @@ import domain.Pupil;
 import domain.Subject;
 import domain.Teacher;
 
+import javax.swing.text.html.Option;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
+
+import static java.util.Optional.empty;
 
 public class AssessmentDaoImpl implements AssessmentDao {
 
@@ -40,18 +44,18 @@ public class AssessmentDaoImpl implements AssessmentDao {
     }
 
     @Override
-    public List<Assessment> getBySybject(Subject subject) {
+    public List<Assessment> getBySubject(Subject subject) {
         return new ArrayList<>();
     }
 
     @Override
-    public Assessment save(Assessment object) {
-        return null;
+    public Optional<Assessment> save(Assessment object) {
+        return empty();
     }
 
     @Override
-    public Assessment update(Assessment object) {
-        return null;
+    public Optional<Assessment> update(Assessment object) {
+        return empty();
     }
 
     @Override
@@ -60,7 +64,7 @@ public class AssessmentDaoImpl implements AssessmentDao {
     }
 
     @Override
-    public Assessment getByName(String name) { return null; }
+    public Optional<Assessment> getByName(String name) { return empty(); }
 
     @Override
     public void delete(Assessment object) {

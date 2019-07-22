@@ -3,8 +3,11 @@ package dao.impl;
 import dao.SubjectDao;
 import domain.Subject;
 
+import java.util.Optional;
 import java.util.Set;
 import java.util.HashSet;
+
+import static java.util.Optional.empty;
 
 public class SubjectDaoImpl implements SubjectDao {
 
@@ -22,13 +25,13 @@ public class SubjectDaoImpl implements SubjectDao {
     }
 
     @Override
-    public Subject save(Subject object) {
-        return null;
+    public Optional<Subject> save(Subject object) {
+        return empty();
     }
 
     @Override
-    public Subject update(Subject object) {
-        return null;
+    public Optional<Subject> update(Subject object) {
+        return empty();
     }
 
     @Override
@@ -37,8 +40,8 @@ public class SubjectDaoImpl implements SubjectDao {
     }
 
     @Override
-    public Subject getByName(String name) {
-        return null;
+    public Optional<Subject> getByName(String name) {
+        return empty();
     }
 
     @Override

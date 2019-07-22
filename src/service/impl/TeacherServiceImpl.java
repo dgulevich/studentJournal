@@ -8,7 +8,10 @@ import service.TeacherService;
 
 import java.util.Collection;
 import java.util.HashSet;
+import java.util.Optional;
 import java.util.Set;
+
+import static java.util.Optional.empty;
 
 public class TeacherServiceImpl implements TeacherService {
 
@@ -28,33 +31,35 @@ public class TeacherServiceImpl implements TeacherService {
     }
 
     @Override
-    public Teacher save(Teacher teacher) {
-        return null;
+    public Optional<Teacher> save(Teacher teacher) {
+        return teacherDao.save(teacher);
     }
 
     @Override
-    public Teacher update(Teacher teacher) {
-        return null;
+    public Optional<Teacher> update(Teacher teacher) {
+        return teacherDao.update(teacher);
     }
 
     @Override
     public boolean cerruit(Teacher teacher) {
-        return false;
+        teacherDao.save(teacher);
+        return true;
     }
 
     @Override
     public boolean exclude(Teacher teacher) {
-        return false;
+        teacherDao.delete(teacher);
+        return true;
     }
 
     @Override
     public Set<Teacher> getAll() {
-        return new HashSet<>();
+        return teacherDao.getAll();
     }
 
     @Override
-    public Teacher getByName(String name) {
-        return null;
+    public Optional<Teacher> getByName(String name) {
+        return teacherDao.getByName(name);
     }
 
     @Override
@@ -74,11 +79,11 @@ public class TeacherServiceImpl implements TeacherService {
 
     @Override
     public Set<Teacher> getByFunction(String function) {
-        return new HashSet<>();
+        return teacherDao.getByFunction(function);
     }
 
     @Override
     public Set<Teacher> getBySubject(Subject subject) {
-        return new HashSet<>();
+        return teacherDao.getBySubject(subject);
     }
 }

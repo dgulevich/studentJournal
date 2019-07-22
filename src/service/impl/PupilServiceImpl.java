@@ -8,7 +8,10 @@ import service.PupilService;
 
 import java.util.Collection;
 import java.util.HashSet;
+import java.util.Optional;
 import java.util.Set;
+
+import static java.util.Optional.empty;
 
 public class PupilServiceImpl implements PupilService {
 
@@ -28,33 +31,35 @@ public class PupilServiceImpl implements PupilService {
     }
 
     @Override
-    public Pupil save(Pupil pupil) {
-        return null;
+    public Optional<Pupil> save(Pupil pupil) {
+        return pupilDao.save(pupil);
     }
 
     @Override
-    public Pupil update(Pupil pupil) {
-        return null;
+    public Optional<Pupil> update(Pupil pupil) {
+        return pupilDao.update(pupil);
     }
 
     @Override
     public boolean cerruit(Pupil person) {
-        return false;
+        pupilDao.save(person);
+        return true;
     }
 
     @Override
     public boolean exclude(Pupil person) {
-        return false;
+        pupilDao.delete(person);
+        return true;
     }
 
     @Override
     public Set<Pupil> getAll() {
-        return new HashSet<>();
+        return pupilDao.getAll();
     }
 
     @Override
-    public Pupil getByName(String name) {
-        return null;
+    public Optional<Pupil> getByName(String name) {
+        return pupilDao.getByName(name);
     }
 
     @Override
@@ -73,12 +78,12 @@ public class PupilServiceImpl implements PupilService {
     }
 
     @Override
-    public boolean transfer(Pupil pupil, Classroom classTo) {
-        return false;
+    public Optional<Pupil> transfer(Pupil pupil, Classroom classTo) {
+        return pupilDao.update(pupil);
     }
 
     @Override
     public Set<Pupil> getByClassroom(Classroom classroom) {
-        return new HashSet<>();
+        return pupilDao.getByClassroom(classroom);
     }
 }

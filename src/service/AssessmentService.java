@@ -6,10 +6,11 @@ import domain.Subject;
 import domain.Teacher;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface AssessmentService extends GenericService<Assessment> {
 
-    Assessment put(Assessment assessment);
+    Optional<Assessment> put(Assessment assessment);
 
     List<Assessment> getByValue(Integer value);
 
@@ -17,5 +18,5 @@ public interface AssessmentService extends GenericService<Assessment> {
 
     List<Assessment> getByTeacher(Teacher teacher);
 
-    List<Assessment> getBySybject(Subject subject);
+    List<Assessment> getBySubject(Subject subject);
 }

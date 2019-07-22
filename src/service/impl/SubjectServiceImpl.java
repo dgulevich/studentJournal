@@ -7,7 +7,10 @@ import service.SubjectService;
 
 import java.util.Collection;
 import java.util.HashSet;
+import java.util.Optional;
 import java.util.Set;
+
+import static java.util.Optional.empty;
 
 public class SubjectServiceImpl implements SubjectService {
 
@@ -27,23 +30,23 @@ public class SubjectServiceImpl implements SubjectService {
     }
 
     @Override
-    public Subject save(Subject subject) {
-        return null;
+    public Optional<Subject> save(Subject subject) {
+        return subjectDao.save(subject);
     }
 
     @Override
-    public Subject update(Subject subject) {
-        return null;
+    public Optional<Subject> update(Subject subject) {
+        return subjectDao.update(subject);
     }
 
     @Override
     public Set<Subject> getAll() {
-        return new HashSet<>();
+        return subjectDao.getAll();
     }
 
     @Override
-    public Subject getByName(String name) {
-        return null;
+    public Optional<Subject> getByName(String name) {
+        return subjectDao.getByName(name);
     }
 
     @Override

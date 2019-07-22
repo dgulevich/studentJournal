@@ -5,7 +5,10 @@ import domain.Classroom;
 import domain.Pupil;
 
 import java.util.HashSet;
+import java.util.Optional;
 import java.util.Set;
+
+import static java.util.Optional.empty;
 
 public class ClassroomDaoImpl implements ClassroomDao {
 
@@ -23,18 +26,18 @@ public class ClassroomDaoImpl implements ClassroomDao {
     }
 
     @Override
-    public Classroom getByPupil(Pupil pupil) {
-        return null;
+    public Optional<Classroom> getByPupil(Pupil pupil) {
+        return empty();
     }
 
     @Override
-    public Classroom save(Classroom object) {
-        return null;
+    public Optional<Classroom> save(Classroom object) {
+        return empty();
     }
 
     @Override
-    public Classroom update(Classroom object) {
-        return null;
+    public Optional<Classroom> update(Classroom object) {
+        return empty();
     }
 
     @Override
@@ -43,8 +46,8 @@ public class ClassroomDaoImpl implements ClassroomDao {
     }
 
     @Override
-    public Classroom getByName(String name) {
-        return null;
+    public Optional<Classroom> getByName(String name) {
+        return empty();
     }
 
     @Override

@@ -4,8 +4,12 @@ import dao.TeacherDao;
 import domain.Subject;
 import domain.Teacher;
 
+import java.util.Optional;
 import java.util.Set;
 import java.util.HashSet;
+
+import static java.util.Optional.empty;
+
 
 public class TeacherDaoImpl implements TeacherDao {
 
@@ -33,13 +37,13 @@ public class TeacherDaoImpl implements TeacherDao {
     }
 
     @Override
-    public Teacher save(Teacher object) {
-        return null;
+    public Optional<Teacher> save(Teacher object) {
+        return empty();
     }
 
     @Override
-    public Teacher update(Teacher object) {
-        return null;
+    public Optional<Teacher> update(Teacher object) {
+        return empty();
     }
 
     @Override
@@ -48,8 +52,8 @@ public class TeacherDaoImpl implements TeacherDao {
     }
 
     @Override
-    public Teacher getByName(String name) {
-        return null;
+    public Optional<Teacher> getByName(String name) {
+        return empty();
     }
 
     @Override

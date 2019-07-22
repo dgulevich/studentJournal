@@ -8,10 +8,10 @@ import domain.Subject;
 import domain.Teacher;
 import service.AssessmentService;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
+
+import static java.util.Optional.empty;
+
 
 public class AssessmentServiceImpl implements AssessmentService {
 
@@ -31,23 +31,23 @@ public class AssessmentServiceImpl implements AssessmentService {
     }
 
     @Override
-    public Assessment save(Assessment assessment) {
-        return null;
+    public Optional<Assessment> save(Assessment assessment) {
+        return assessmentDao.save(assessment);
     }
 
     @Override
-    public Assessment update(Assessment assessment) {
-        return null;
+    public Optional<Assessment> update(Assessment assessment) {
+        return assessmentDao.update(assessment);
     }
 
     @Override
-    public List<Assessment> getAll() {
-        return new ArrayList<>();
+    public Collection<Assessment> getAll() {
+        return assessmentDao.getAll();
     }
 
     @Override
-    public Assessment getByName(String name) {
-        return null;
+    public Optional<Assessment> getByName(String name) {
+        return assessmentDao.getByName(name);
     }
 
     @Override
@@ -66,27 +66,27 @@ public class AssessmentServiceImpl implements AssessmentService {
     }
 
     @Override
-    public Assessment put(Assessment assessment) {
-        return null;
+    public Optional<Assessment> put(Assessment assessment) {
+        return assessmentDao.update(assessment);
     }
 
     @Override
     public List<Assessment> getByValue(Integer value) {
-        return new ArrayList<>();
+        return assessmentDao.getByValue(value);
     }
 
     @Override
     public List<Assessment> getByPupil(Pupil pupil) {
-        return new ArrayList<>();
+        return assessmentDao.getByPupil(pupil);
     }
 
     @Override
     public List<Assessment> getByTeacher(Teacher teacher) {
-        return new ArrayList<>();
+        return assessmentDao.getByTeacher(teacher);
     }
 
     @Override
-    public List<Assessment> getBySybject(Subject subject) {
-        return new ArrayList<>();
+    public List<Assessment> getBySubject(Subject subject) {
+        return assessmentDao.getBySubject(subject);
     }
 }

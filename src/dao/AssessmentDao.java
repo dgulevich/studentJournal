@@ -14,5 +14,5 @@ public interface AssessmentDao extends GenericDao<Assessment> {
 
     List<Assessment> getByTeacher(Teacher teacher);
 
-    List<Assessment> getBySybject(Subject subject);
+    List<Assessment> getBySubject(Subject subject);
 }

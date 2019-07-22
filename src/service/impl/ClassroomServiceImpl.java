@@ -8,7 +8,10 @@ import service.ClassroomService;
 
 import java.util.Collection;
 import java.util.HashSet;
+import java.util.Optional;
 import java.util.Set;
+
+import static java.util.Optional.empty;
 
 public class ClassroomServiceImpl implements ClassroomService {
 
@@ -28,27 +31,27 @@ public class ClassroomServiceImpl implements ClassroomService {
     }
 
     @Override
-    public Classroom save(Classroom object) {
-        return null;
+    public Optional<Classroom> save(Classroom classroom) {
+        return classroomDao.save(classroom);
     }
 
     @Override
-    public Classroom update(Classroom object) {
-        return null;
+    public Optional<Classroom> update(Classroom classroom) {
+        return classroomDao.update(classroom);
     }
 
     @Override
     public Set<Classroom> getAll() {
-        return new HashSet<>();
+        return classroomDao.getAll();
     }
 
     @Override
-    public Classroom getByName(String name) {
-        return null;
+    public Optional<Classroom> getByName(String name) {
+        return classroomDao.getByName(name);
     }
 
     @Override
-    public void delete(Classroom object) {
+    public void delete(Classroom classroom) {
 
     }
 
@@ -63,7 +66,7 @@ public class ClassroomServiceImpl implements ClassroomService {
     }
 
     @Override
-    public Classroom getByPupil(Pupil pupil) {
-        return null;
+    public Optional<Classroom> getByPupil(Pupil pupil) {
+        return classroomDao.getByPupil(pupil);
     }
 }

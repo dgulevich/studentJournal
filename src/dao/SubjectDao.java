@@ -1,4 +1,6 @@
 package dao;
 
-public interface SubjectDao extends GenericDao {
+import domain.Subject;
+
+public interface SubjectDao extends GenericDao<Subject> {
 }

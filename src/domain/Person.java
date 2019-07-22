@@ -1,15 +1,15 @@
 package domain;
 
-abstract public class People {
+abstract public class Person {
 
     private String name;
 
     private Integer age;
 
-    public People() {
+    public Person() {
     }
 
-    public People(String name, Integer age) {
+    public Person(String name, Integer age) {
         this.name = name;
         this.age = age;
     }

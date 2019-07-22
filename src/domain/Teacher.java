@@ -1,6 +1,6 @@
 package domain;
 
-public class Teacher extends People{
+public class Teacher extends Person {
 
     private Integer salary;
 

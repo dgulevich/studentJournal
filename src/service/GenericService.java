@@ -1,8 +1,8 @@
-package dao;
+package service;
 
 import java.util.Collection;
 
-public interface GenericDao<T> {
+public interface GenericService<T> {
 
     T save(T object);
 

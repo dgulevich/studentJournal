@@ -1,4 +1,9 @@
 package service;
 
-public interface ClassroomService {
+import domain.Classroom;
+import domain.Pupil;
+
+public interface ClassroomService extends GenericService<Classroom> {
+
+    Classroom getByPupil(Pupil pupil);
 }

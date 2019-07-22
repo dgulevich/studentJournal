@@ -2,10 +2,11 @@ package dao;
 
 import domain.Teacher;
 import domain.Subject;
+import java.util.Set;
 
-public interface TeacherDao extends GenericDao {
+public interface TeacherDao extends GenericDao<Teacher> {
 
-    Teacher[] getByFunction(String function);
+    Set<Teacher> getByFunction(String function);
 
-    Teacher[] getBySubject(Subject subject);
+    Set<Teacher> getBySubject(Subject subject);
 }

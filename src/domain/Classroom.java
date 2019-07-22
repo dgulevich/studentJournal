@@ -1,17 +1,20 @@
 package domain;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class Classroom {
 
     private String name;
 
     private Integer numberOfPupils;
 
-    private Pupil[] pupils;
+    private Set<Pupil> pupils;
 
     public Classroom() {
     }
 
-    public Classroom(String name, Integer numberOfPupils, Pupil[] pupils) {
+    public Classroom(String name, Integer numberOfPupils, Set<Pupil> pupils) {
         this.name = name;
         this.numberOfPupils = numberOfPupils;
         this.pupils = pupils;
@@ -33,11 +36,9 @@ public class Classroom {
         this.numberOfPupils = numberOfPupils;
     }
 
-    public Pupil[] getPupils() {
-        return pupils;
+    public Set<Pupil> getPupils() {
+        return new HashSet<>();
     }
 
-    public void setPupils(Pupil[] pupils) {
-        this.pupils = pupils;
-    }
+    public void setPupils(Set<Pupil> pupils) { this.pupils = pupils; }
 }

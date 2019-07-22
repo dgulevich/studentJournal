@@ -1,4 +1,6 @@
 package service;
 
-public interface SubjectService {
+import domain.Subject;
+
+public interface SubjectService extends GenericService<Subject> {
 }

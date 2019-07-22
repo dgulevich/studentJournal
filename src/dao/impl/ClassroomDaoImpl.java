@@ -4,6 +4,9 @@ import dao.ClassroomDao;
 import domain.Classroom;
 import domain.Pupil;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class ClassroomDaoImpl implements ClassroomDao {
 
     private static ClassroomDao instance;
@@ -25,18 +28,18 @@ public class ClassroomDaoImpl implements ClassroomDao {
     }
 
     @Override
-    public Classroom save(Object object) {
+    public Classroom save(Classroom object) {
         return null;
     }
 
     @Override
-    public Classroom update(Object object) {
+    public Classroom update(Classroom object) {
         return null;
     }
 
     @Override
-    public Classroom[] getAll() {
-        return new Classroom[0];
+    public Set<Classroom> getAll() {
+        return new HashSet<>();
     }
 
     @Override
@@ -45,7 +48,7 @@ public class ClassroomDaoImpl implements ClassroomDao {
     }
 
     @Override
-    public void delete(Object object) {
+    public void delete(Classroom object) {
 
     }
 

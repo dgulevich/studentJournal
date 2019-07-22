@@ -3,6 +3,9 @@ package dao.impl;
 import dao.SubjectDao;
 import domain.Subject;
 
+import java.util.Set;
+import java.util.HashSet;
+
 public class SubjectDaoImpl implements SubjectDao {
 
     private static SubjectDao instance;
@@ -19,18 +22,18 @@ public class SubjectDaoImpl implements SubjectDao {
     }
 
     @Override
-    public Subject save(Object object) {
+    public Subject save(Subject object) {
         return null;
     }
 
     @Override
-    public Subject update(Object object) {
+    public Subject update(Subject object) {
         return null;
     }
 
     @Override
-    public Subject[] getAll() {
-        return new Subject[0];
+    public Set<Subject> getAll() {
+        return new HashSet<>();
     }
 
     @Override
@@ -39,7 +42,7 @@ public class SubjectDaoImpl implements SubjectDao {
     }
 
     @Override
-    public void delete(Object object) {
+    public void delete(Subject object) {
 
     }
 

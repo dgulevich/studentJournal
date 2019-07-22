@@ -2,8 +2,9 @@ package dao;
 
 import domain.Pupil;
 import domain.Classroom;
+import java.util.Set;
 
-public interface PupilDao extends GenericDao {
+public interface PupilDao extends GenericDao<Pupil> {
 
-    Pupil[] getByClassroom(Classroom classroom);
+    Set<Pupil> getByClassroom(Classroom classroom);
 }

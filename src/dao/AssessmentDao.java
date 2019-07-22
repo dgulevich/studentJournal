@@ -4,26 +4,15 @@ import domain.Assessment;
 import domain.Pupil;
 import domain.Subject;
 import domain.Teacher;
+import java.util.List;
 
-public interface AssessmentDao {
+public interface AssessmentDao extends GenericDao<Assessment> {
 
-    Assessment[] getByValue(Integer value);
+    List<Assessment> getByValue(Integer value);
 
-    Assessment[] getByPupil(Pupil pupil);
+    List<Assessment> getByPupil(Pupil pupil);
 
-    Assessment[] getByTeacher(Teacher teacher);
+    List<Assessment> getByTeacher(Teacher teacher);
 
-    Assessment[] getBySybject(Subject subject);
-
-    Object save(Object object);
-
-    Object update(Object object);
-
-    Object[] getAll();
-
-    void delete(Object object);
-
-    void deleteAll();
-
-    void deleteByName(String name);
+    List<Assessment> getBySybject(Subject subject);
 }

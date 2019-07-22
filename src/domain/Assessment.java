@@ -2,6 +2,8 @@ package domain;
 
 public class Assessment {
 
+    private String name;
+
     private Integer value;
 
     private Pupil pupil;
@@ -15,13 +17,18 @@ public class Assessment {
     public Assessment() {
     }
 
-    public Assessment(Integer value, Pupil pupil, Teacher teacher, Subject subject, String task) {
+    public Assessment(String name, Integer value, Pupil pupil, Teacher teacher, Subject subject, String task) {
+        this.name = name;
         this.value = value;
         this.pupil = pupil;
         this.teacher = teacher;
         this.subject = subject;
         this.task = task;
     }
+
+    public String getName() { return name; }
+
+    public void setName(String name) { this.name = name; }
 
     public Integer getValue() {
         return value;

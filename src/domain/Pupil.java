@@ -1,6 +1,6 @@
 package domain;
 
-public class Pupil extends People{
+public class Pupil extends Person {
 
     private Classroom classroom;
 

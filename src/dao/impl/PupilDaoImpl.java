@@ -4,6 +4,9 @@ import dao.PupilDao;
 import domain.Classroom;
 import domain.Pupil;
 
+import java.util.Set;
+import java.util.HashSet;
+
 public class PupilDaoImpl implements PupilDao {
 
     private static PupilDao instance;
@@ -20,23 +23,23 @@ public class PupilDaoImpl implements PupilDao {
     }
 
     @Override
-    public Pupil[] getByClassroom(Classroom classroom) {
-        return new Pupil[0];
+    public Set<Pupil> getByClassroom(Classroom classroom) {
+        return new HashSet<>();
     }
 
     @Override
-    public Pupil save(Object object) {
+    public Pupil save(Pupil object) {
         return null;
     }
 
     @Override
-    public Pupil update(Object object) {
+    public Pupil update(Pupil object) {
         return null;
     }
 
     @Override
-    public Pupil[] getAll() {
-        return new Pupil[0];
+    public Set<Pupil> getAll() {
+        return new HashSet<>();
     }
 
     @Override
@@ -45,7 +48,7 @@ public class PupilDaoImpl implements PupilDao {
     }
 
     @Override
-    public void delete(Object object) {
+    public void delete(Pupil object) {
 
     }
 

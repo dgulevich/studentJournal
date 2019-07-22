@@ -6,6 +6,9 @@ import domain.Pupil;
 import domain.Subject;
 import domain.Teacher;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class AssessmentDaoImpl implements AssessmentDao {
 
     private static AssessmentDao instance;
@@ -22,42 +25,45 @@ public class AssessmentDaoImpl implements AssessmentDao {
     }
 
     @Override
-    public Assessment[] getByValue(Integer value) {
-        return new Assessment[0];
+    public List<Assessment> getByValue(Integer value) {
+        return new ArrayList<>();
     }
 
     @Override
-    public Assessment[] getByPupil(Pupil pupil) {
-        return new Assessment[0];
+    public List<Assessment> getByPupil(Pupil pupil) {
+        return new ArrayList<>();
     }
 
     @Override
-    public Assessment[] getByTeacher(Teacher teacher) {
-        return new Assessment[0];
+    public List<Assessment> getByTeacher(Teacher teacher) {
+        return new ArrayList<>();
     }
 
     @Override
-    public Assessment[] getBySybject(Subject subject) {
-        return new Assessment[0];
+    public List<Assessment> getBySybject(Subject subject) {
+        return new ArrayList<>();
     }
 
     @Override
-    public Assessment save(Object object) {
+    public Assessment save(Assessment object) {
         return null;
     }
 
     @Override
-    public Assessment update(Object object) {
+    public Assessment update(Assessment object) {
         return null;
     }
 
     @Override
-    public Assessment[] getAll() {
-        return new Assessment[0];
+    public List<Assessment> getAll() {
+        return new ArrayList<>();
     }
 
     @Override
-    public void delete(Object object) {
+    public Assessment getByName(String name) { return null; }
+
+    @Override
+    public void delete(Assessment object) {
 
     }
 
